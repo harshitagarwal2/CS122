@@ -1,0 +1,105 @@
+.parsons .sortable-code-container {
+	text-align: center;
+}
+.parsons :not(.block).sortable-code-container {
+	-ms-user-select: none; -webkit-user-select: none; -moz-user-select: -moz-none; user-select: none;
+}
+.parsons .sortable-code {
+	margin: 0px 15px; text-align: left; padding-left: 0px; vertical-align: top; display: inline-block; position: static;
+}
+.parsons .source {
+	list-style: none; border: 1px solid rgb(239, 239, 255); border-image: none; padding-bottom: 10px; padding-left: 0px; font-size: 100%; margin-left: 0px; position: relative; background-color: rgb(239, 239, 255);
+}
+.parsons .answer {
+	list-style: none; border: 1px solid rgb(239, 239, 255); border-image: none; padding-bottom: 10px; padding-left: 0px; font-size: 100%; margin-left: 0px; position: relative; background-color: rgb(239, 239, 255);
+}
+.parsons .answer1 {
+	list-style: none; border: 1px solid rgb(239, 239, 255); border-image: none; padding-bottom: 10px; padding-left: 0px; font-size: 100%; margin-left: 0px; position: relative; background-color: rgb(239, 239, 255);
+}
+.parsons .answer2 {
+	list-style: none; border: 1px solid rgb(239, 239, 255); border-image: none; padding-bottom: 10px; padding-left: 0px; font-size: 100%; margin-left: 0px; position: relative; background-color: rgb(239, 239, 255);
+}
+.parsons .answer3 {
+	list-style: none; border: 1px solid rgb(239, 239, 255); border-image: none; padding-bottom: 10px; padding-left: 0px; font-size: 100%; margin-left: 0px; position: relative; background-color: rgb(239, 239, 255);
+}
+.parsons .answer4 {
+	list-style: none; border: 1px solid rgb(239, 239, 255); border-image: none; padding-bottom: 10px; padding-left: 0px; font-size: 100%; margin-left: 0px; position: relative; background-color: rgb(239, 239, 255);
+}
+.parsons .source {
+	background-color: rgb(239, 239, 255);
+}
+.parsons .answer {
+	border-color: rgb(238, 238, 0); background-color: rgb(255, 255, 170);
+}
+.parsons .answer1 {
+	background: linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 30px 0px / 1px 100% rgb(255, 255, 170); border-color: rgb(238, 238, 0);
+}
+.parsons .answer2 {
+	background: linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 30px 0px / 1px 100%, linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 60px 0px / 1px 100% rgb(255, 255, 170); border-color: rgb(238, 238, 0);
+}
+.parsons .answer3 {
+	background: linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 30px 0px / 1px 100%, linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 60px 0px / 1px 100%, linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 90px 0px / 1px 100% rgb(255, 255, 170); border-color: rgb(238, 238, 0);
+}
+.parsons .answer4 {
+	background: linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 30px 0px / 1px 100%, linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 60px 0px / 1px 100%, linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 90px 0px / 1px 100%, linear-gradient(rgb(238, 238, 0), rgb(238, 238, 0)) no-repeat 120px 0px / 1px 100% rgb(255, 255, 170); border-color: rgb(238, 238, 0);
+}
+.parsons .block {
+	padding: 5px 10px; border-radius: 10px; border: 1px solid lightgray; border-image: none; overflow: hidden; margin-top: 5px; position: absolute; cursor: move; background-color: rgb(239, 239, 239); -moz-border-radius: 10px; -webkit-border-radius: 10px;
+}
+.parsons .block code {
+	clear: both; float: left; display: block; background-color: transparent;
+}
+.parsons .block p {
+	margin: 0px;
+}
+.parsons .block {
+	box-sizing: content-box;
+}
+.parsons .block::before {
+	box-sizing: content-box;
+}
+.parsons .block::after {
+	box-sizing: content-box;
+}
+.parsons .indent1 {
+	margin-left: 30px;
+}
+.parsons .indent2 {
+	margin-left: 60px;
+}
+.parsons .indent3 {
+	margin-left: 90px;
+}
+.parsons .indent4 {
+	margin-left: 120px;
+}
+.parsons .incorrect {
+	background: rgb(242, 222, 222); border: 1px solid rgb(238, 211, 215); border-image: none;
+}
+.parsons .correct {
+	background: rgb(223, 240, 216); border: 1px solid rgb(214, 233, 198); border-image: none;
+}
+.parsons .indentLeft {
+	padding: 4px 9px; border: 2px solid rgb(255, 204, 0); border-image: none; background-color: rgb(255, 240, 179);
+}
+.parsons .indentRight {
+	padding: 4px 9px; border: 2px solid rgb(255, 204, 0); border-image: none; background-color: rgb(255, 240, 179);
+}
+.parsons .indentLeft {
+	background-position: left, right; background-image: url("parsons-ll.svg"), url("parsons-rl.svg"); background-repeat: no-repeat, no-repeat;
+}
+.parsons .indentRight {
+	background-position: left, right; background-image: url("parsons-lr.svg"), url("parsons-rr.svg"); background-repeat: no-repeat, no-repeat;
+}
+.parsons .incorrectPosition {
+	border: 1px solid red; border-image: none; background-color: rgb(255, 186, 186);
+}
+.parsons {
+	margin: 10px 0px; border-radius: 0px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+.parsons .parsons-text {
+	margin-right: auto; margin-left: auto; max-width: 500pt;
+}
+.parsons .parsons-controls {
+	text-align: center; margin-right: auto; margin-left: auto; max-width: 500pt;
+}

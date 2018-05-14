@@ -1,0 +1,405 @@
+div.ExecutionVisualizer {
+	
+}
+div.ExecutionVisualizer table.visualizer {
+	width: 100%; font-family: verdana, arial, helvetica, sans-serif; font-size: 10pt; margin-bottom: 10px;
+}
+table.visualizer tr {
+	text-align: center;
+}
+div.ExecutionVisualizer table.visualizer td.vizLayoutTd {
+	margin: 0px 20px; vertical-align: top; display: inline-block;
+}
+#vizLayoutTdThird {
+	text-align: center;
+}
+div.ExecutionVisualizer td#stack_td {
+	font-size: 10pt; vertical-align: top;
+}
+div.ExecutionVisualizer td#heap_td {
+	font-size: 10pt; vertical-align: top;
+}
+div.ExecutionVisualizer #dataViz {
+	margin-left: 25px;
+}
+div.ExecutionVisualizer div#codeDisplayDiv {
+	width: 550px;
+}
+div.ExecutionVisualizer div#pyCodeOutputDiv {
+	overflow: auto; margin-right: auto; margin-left: auto; max-height: 450px;
+}
+div.ExecutionVisualizer table#pyCodeOutput {
+	margin: 6px auto; line-height: 1.1em; padding-top: 3px; font-family: Andale mono, monospace; font-size: 12pt; border-top-color: rgb(187, 187, 187); border-bottom-color: rgb(187, 187, 187); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; border-collapse: separate; border-spacing: 0px;
+}
+div.ExecutionVisualizer table#pyCodeOutput td {
+	vertical-align: middle; white-space: nowrap;
+}
+div.ExecutionVisualizer #leftCodeGutterSVG {
+	width: 18px; height: 0px; min-width: 18px;
+}
+div.ExecutionVisualizer #prevLegendArrowSVG {
+	width: 18px; height: 10px;
+}
+div.ExecutionVisualizer #curLegendArrowSVG {
+	width: 18px; height: 10px;
+}
+div.ExecutionVisualizer .arrow {
+	font-size: 16pt;
+}
+div.ExecutionVisualizer table#pyCodeOutput .lineNo {
+	padding: 0.2em 0.5em 0.2em 0.3em; text-align: right; color: rgb(170, 170, 170);
+}
+div.ExecutionVisualizer table#pyCodeOutput .cod {
+	text-align: left; padding-left: 7px; margin-left: 3px;
+}
+div.ExecutionVisualizer div#progOutputs {
+	margin-top: 8px;
+}
+div.ExecutionVisualizer div#legendDiv {
+	padding: 0px; text-align: left; color: rgb(102, 102, 102); font-size: 9pt; margin-top: 10px;
+}
+div.ExecutionVisualizer div#editCodeLinkDiv {
+	margin: 8px auto; text-align: center; font-size: 11pt;
+}
+div.ExecutionVisualizer div#annotateLinkDiv {
+	margin-top: 0px; margin-bottom: 12px;
+}
+div.ExecutionVisualizer div#stepAnnotationDiv {
+	margin-bottom: 12px;
+}
+div.ExecutionVisualizer textarea#stepAnnotationEditor {
+	padding: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; overflow: auto; resize: none;
+}
+div.ExecutionVisualizer textarea#vizTitleEditor {
+	padding: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; overflow: auto; resize: none;
+}
+div.ExecutionVisualizer textarea#vizDescriptionEditor {
+	padding: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; overflow: auto; resize: none;
+}
+div.ExecutionVisualizer #errorOutput {
+	padding: 2px; color: rgb(233, 63, 52); line-height: 1.5em; font-size: 12pt; margin-bottom: 4px;
+}
+div.ExecutionVisualizer #vcrControls {
+	margin: 15px auto; text-align: center;
+}
+div.ExecutionVisualizer #vcrControls button {
+	margin-right: 2px; margin-left: 2px;
+}
+div.ExecutionVisualizer #vcrControls #curInstr {
+	margin-right: 4px; margin-left: 4px;
+}
+div.ExecutionVisualizer #pyStdout {
+	padding: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; overflow: auto; font-family: Andale mono, monospace; font-size: 12pt; resize: none;
+}
+div.ExecutionVisualizer .vizFrame {
+	padding-left: 8px; margin-bottom: 20px; border-left-color: rgb(204, 204, 204); border-left-width: 2px; border-left-style: solid;
+}
+div.ExecutionVisualizer .nullObj {
+	
+}
+div.ExecutionVisualizer .stringObj {
+	font-family: Andale mono, monospace; white-space: nowrap;
+}
+div.ExecutionVisualizer .customObj {
+	font-family: Andale mono, monospace; white-space: nowrap;
+}
+div.ExecutionVisualizer .funcObj {
+	font-family: Andale mono, monospace; white-space: nowrap;
+}
+div.ExecutionVisualizer .retval {
+	font-size: 9pt;
+}
+div.ExecutionVisualizer .stackFrame .retval {
+	color: rgb(233, 63, 52);
+}
+div.ExecutionVisualizer table.listTbl {
+	background-color: rgb(255, 255, 198);
+}
+div.ExecutionVisualizer table.tupleTbl {
+	background-color: rgb(255, 255, 198);
+}
+div.ExecutionVisualizer table.setTbl {
+	background-color: rgb(255, 255, 198);
+}
+div.ExecutionVisualizer table.listTbl {
+	border: 0px solid black; border-image: none; border-spacing: 0px;
+}
+div.ExecutionVisualizer table.listTbl td.listHeader {
+	text-align: left; color: rgb(119, 119, 119); padding-top: 2px; padding-bottom: 3px; padding-left: 4px; font-size: 8pt; border-left-color: rgb(85, 85, 85); border-left-width: 1px; border-left-style: solid;
+}
+div.ExecutionVisualizer table.tupleTbl td.tupleHeader {
+	text-align: left; color: rgb(119, 119, 119); padding-top: 2px; padding-bottom: 3px; padding-left: 4px; font-size: 8pt; border-left-color: rgb(85, 85, 85); border-left-width: 1px; border-left-style: solid;
+}
+div.ExecutionVisualizer table.tupleTbl {
+	color: black; border-top-color: rgb(85, 85, 85); border-right-color: rgb(85, 85, 85); border-bottom-color: rgb(85, 85, 85); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-spacing: 0px;
+}
+div.ExecutionVisualizer table.listTbl td.listElt {
+	border-bottom-color: rgb(85, 85, 85); border-left-color: rgb(85, 85, 85); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: solid; border-left-style: solid;
+}
+div.ExecutionVisualizer table.tupleTbl td.tupleElt {
+	border-left-color: rgb(85, 85, 85); border-left-width: 1px; border-left-style: solid;
+}
+div.ExecutionVisualizer table.customObjTbl {
+	border: 1px solid black; border-image: none; color: black; background-color: white;
+}
+div.ExecutionVisualizer table.customObjTbl td.customObjElt {
+	padding: 5px;
+}
+div.ExecutionVisualizer table.listTbl td.listElt {
+	padding: 0px 10px 8px; vertical-align: bottom;
+}
+div.ExecutionVisualizer table.tupleTbl td.tupleElt {
+	padding: 0px 10px 8px; vertical-align: bottom;
+}
+div.ExecutionVisualizer table.setTbl {
+	border: 1px solid rgb(85, 85, 85); border-image: none; text-align: center; border-spacing: 0px;
+}
+div.ExecutionVisualizer table.setTbl td.setElt {
+	padding: 8px;
+}
+div.ExecutionVisualizer table.dictTbl {
+	border-spacing: 1px;
+}
+div.ExecutionVisualizer table.instTbl {
+	border-spacing: 1px;
+}
+div.ExecutionVisualizer table.classTbl {
+	border-spacing: 1px;
+}
+div.ExecutionVisualizer table.dictTbl td.dictKey {
+	background-color: rgb(250, 235, 191);
+}
+div.ExecutionVisualizer table.instTbl td.instKey {
+	background-color: rgb(250, 235, 191);
+}
+div.ExecutionVisualizer table.classTbl td.classKey {
+	background-color: rgb(250, 235, 191);
+}
+div.ExecutionVisualizer table.dictTbl td.dictVal {
+	background-color: rgb(255, 255, 198);
+}
+div.ExecutionVisualizer table.instTbl td.instVal {
+	background-color: rgb(255, 255, 198);
+}
+div.ExecutionVisualizer table.classTbl td.classVal {
+	background-color: rgb(255, 255, 198);
+}
+div.ExecutionVisualizer table.dictTbl td.dictKey {
+	padding: 12px 4px 5px 10px; text-align: right;
+}
+div.ExecutionVisualizer table.instTbl td.instKey {
+	padding: 12px 4px 5px 10px; text-align: right;
+}
+div.ExecutionVisualizer table.classTbl td.classKey {
+	padding: 12px 4px 5px 10px; text-align: right;
+}
+div.ExecutionVisualizer table.dictTbl td.dictVal {
+	padding: 12px 10px 5px 4px;
+}
+div.ExecutionVisualizer table.instTbl td.instVal {
+	padding: 12px 10px 5px 4px;
+}
+div.ExecutionVisualizer table.classTbl td.classVal {
+	padding: 12px 10px 5px 4px;
+}
+div.ExecutionVisualizer table.classTbl td {
+	border-bottom-color: rgb(136, 136, 136); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div.ExecutionVisualizer table.instTbl td {
+	border-bottom-color: rgb(136, 136, 136); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div.ExecutionVisualizer table.classTbl td.classVal {
+	border-left-color: rgb(136, 136, 136); border-left-width: 1px; border-left-style: solid;
+}
+div.ExecutionVisualizer table.instTbl td.instVal {
+	border-left-color: rgb(136, 136, 136); border-left-width: 1px; border-left-style: solid;
+}
+div.ExecutionVisualizer table.classTbl {
+	border: 1px solid rgb(136, 136, 136); border-image: none; border-collapse: collapse;
+}
+div.ExecutionVisualizer td.listElt table.dictTbl {
+	border: 1px solid rgb(136, 136, 136); border-image: none;
+}
+div.ExecutionVisualizer td.tupleElt table.dictTbl {
+	border: 1px solid rgb(136, 136, 136); border-image: none;
+}
+div.ExecutionVisualizer td.dictVal table.dictTbl {
+	border: 1px solid rgb(136, 136, 136); border-image: none;
+}
+div.ExecutionVisualizer td.instVal table.dictTbl {
+	border: 1px solid rgb(136, 136, 136); border-image: none;
+}
+div.ExecutionVisualizer td.classVal table.dictTbl {
+	border: 1px solid rgb(136, 136, 136); border-image: none;
+}
+div.ExecutionVisualizer .objectIdLabel {
+	color: rgb(68, 68, 68); font-size: 8pt; margin-bottom: 2px;
+}
+div.ExecutionVisualizer .typeLabel {
+	color: rgb(85, 85, 85); font-size: 8pt; margin-bottom: 2px;
+}
+div.ExecutionVisualizer div#stack {
+	padding-right: 30px; padding-left: 10px;
+}
+div.ExecutionVisualizer div#globals_area {
+	padding-right: 30px; padding-left: 10px;
+}
+div.ExecutionVisualizer div.stackFrame {
+	padding: 2px 6px 4px; font-size: 10pt; margin-bottom: 15px; background-color: rgb(255, 255, 255);
+}
+div.ExecutionVisualizer div.zombieStackFrame {
+	padding: 2px 6px 4px; font-size: 10pt; margin-bottom: 15px; background-color: rgb(255, 255, 255);
+}
+div.ExecutionVisualizer div.zombieStackFrame {
+	color: rgb(160, 160, 160); border-left-color: rgb(170, 170, 170); border-left-width: 1px; border-left-style: dotted;
+}
+div.ExecutionVisualizer div.highlightedStackFrame {
+	background-color: rgb(226, 235, 246);
+}
+div.ExecutionVisualizer div.stackFrame {
+	border-left-color: rgb(166, 179, 182); border-left-width: 1px; border-left-style: solid;
+}
+div.ExecutionVisualizer div.highlightedStackFrame {
+	border-left-color: rgb(166, 179, 182); border-left-width: 1px; border-left-style: solid;
+}
+div.ExecutionVisualizer div.stackFrameHeader {
+	font-family: Andale mono, monospace; font-size: 10pt; margin-top: 4px; margin-bottom: 3px; white-space: nowrap;
+}
+div.ExecutionVisualizer td.stackFrameVar {
+	text-align: right; padding-top: 3px; padding-right: 8px; padding-bottom: 3px;
+}
+div.ExecutionVisualizer td.stackFrameValue {
+	text-align: left; padding-top: 3px; padding-bottom: 3px; padding-left: 3px; vertical-align: middle; border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: solid; border-left-style: solid;
+}
+div.ExecutionVisualizer .stackFrameVarTable tr {
+	
+}
+div.ExecutionVisualizer .stackFrameVarTable {
+	text-align: right; padding-top: 3px; margin-right: 0px; margin-left: auto; border-collapse: separate; border-spacing: 2px;
+}
+div.ExecutionVisualizer div#heap {
+	padding-left: 30px; float: left;
+}
+div.ExecutionVisualizer td.toplevelHeapObject {
+	padding: 4px 8px;
+}
+div.ExecutionVisualizer table.heapRow {
+	margin-bottom: 10px;
+}
+div.ExecutionVisualizer div.heapObject {
+	padding-left: 2px;
+}
+div.ExecutionVisualizer div.heapPrimitive {
+	padding-left: 4px;
+}
+div.ExecutionVisualizer div#stackHeader {
+	text-align: right; margin-bottom: 15px;
+}
+div.ExecutionVisualizer div#heapHeader {
+	margin-bottom: 15px;
+}
+div.ExecutionVisualizer div#stackHeader {
+	color: rgb(51, 51, 51); font-size: 10pt;
+}
+div.ExecutionVisualizer div#heapHeader {
+	color: rgb(51, 51, 51); font-size: 10pt;
+}
+div.ExecutionVisualizer #executionSlider {
+	margin: 15px auto 5px; width: 95%;
+}
+div.ExecutionVisualizer #executionSliderCaption {
+	color: rgb(102, 102, 102); font-size: 8pt; margin-top: 15px;
+}
+div.ExecutionVisualizer #executionSliderFooter {
+	margin-top: -7px;
+}
+div.ExecutionVisualizer .ui-slider .ui-slider-handle {
+	border: 1px solid rgb(153, 153, 153); border-image: none;
+}
+textarea.bubbleInputText {
+	border: 1px solid rgb(204, 204, 204); border-image: none; width: 225px; height: 35px; overflow: auto; max-height: 35px; max-width: 225px; resize: none;
+}
+.ui-tooltip-pgbootstrap {
+	line-height: 1.3em; font-family: verdana, arial, helvetica, sans-serif; font-size: 9pt;
+}
+textarea.bubbleInputText {
+	line-height: 1.3em; font-family: verdana, arial, helvetica, sans-serif; font-size: 9pt;
+}
+.ui-tooltip-pgbootstrap {
+	border-radius: 5px; border: 2px solid rgb(66, 132, 211); border-image: none; color: rgb(51, 51, 51); cursor: pointer; min-width: 10px; max-width: 250px; box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2); background-clip: padding-box; background-color: rgb(255, 255, 255); -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2); -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2); -webkit-background-clip: padding-box; -moz-background-clip: padding;
+}
+.ui-tooltip-pgbootstrap .ui-tooltip-titlebar {
+	line-height: 22px; font-size: 18px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; background-color: transparent;
+}
+.ui-tooltip-pgbootstrap .ui-tooltip-content {
+	padding: 5px 8px;
+}
+.ui-tooltip-pgbootstrap .ui-tooltip-titlebar .ui-state-default {
+	top: 49%; right: 9px;
+}
+.ui-tooltip-pgbootstrap .ui-tooltip-icon {
+	background: white;
+}
+.ui-tooltip-pgbootstrap .ui-tooltip-icon .ui-icon {
+	width: auto; height: auto; color: rgb(0, 0, 0); line-height: 18px; font-size: 20px; font-weight: bold; float: right; opacity: 0.2; text-shadow: 0px 1px 0px #ffffff;
+}
+.ui-tooltip-pgbootstrap .ui-tooltip-icon .ui-icon:hover {
+	color: rgb(0, 0, 0); text-decoration: none; cursor: pointer; opacity: 0.4;
+}
+.ui-tooltip-pgbootstrap {
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.ui-tooltip-pgbootstrap-stub {
+	border: 1px solid rgb(153, 153, 153); border-image: none;
+}
+.ui-tooltip-pgbootstrap-stub .ui-tooltip-content {
+	padding: 6px 9px;
+}
+div.ExecutionVisualizer .annotationText {
+	line-height: 1.5em; font-family: verdana, arial, helvetica, sans-serif; font-size: 11pt;
+}
+div.ExecutionVisualizer .vizDescriptionText {
+	line-height: 1.5em; font-family: verdana, arial, helvetica, sans-serif; font-size: 11pt;
+}
+div.ExecutionVisualizer .vizTitleText {
+	font-family: verdana, arial, helvetica, sans-serif; font-size: 16pt; margin-bottom: 12pt;
+}
+div.ExecutionVisualizer div#vizHeader {
+	width: 700px; margin-bottom: 10px; max-width: 700px;
+}
+div.ExecutionVisualizer .highlight-prev {
+	background-color: rgb(240, 240, 234);
+}
+div.ExecutionVisualizer .highlight-cur {
+	background-color: rgb(255, 255, 102);
+}
+div.ExecutionVisualizer .highlight-legend {
+	padding: 2px;
+}
+.ui-resizable-e {
+	border: 3px solid white; border-image: none; width: 1px; background-color: rgb(221, 221, 221);
+}
+.ui-resizable-e:hover {
+	border-color: rgb(221, 221, 221);
+}
+div.ExecutionVisualizer div#rawUserInputDiv {
+	margin: 5px auto; padding: 5px; border: 1px solid rgb(233, 63, 52); border-image: none; width: 95%; text-align: center;
+}
+div.ExecutionVisualizer .pycrazy-highlight-prev {
+	background-color: rgb(238, 238, 238);
+}
+div.ExecutionVisualizer .pycrazy-highlight-cur {
+	background-color: rgb(255, 255, 102);
+}
+div.ExecutionVisualizer .pycrazy-highlight-prev-and-cur {
+	text-decoration: none; border-bottom-color: rgb(153, 153, 153); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 102);
+}
+#optTabularView thead.stepTableThead {
+	background-color: rgb(187, 187, 187);
+}
+#optTabularView tbody.stepTableTbody {
+	
+}
+#optTabularView td.stepTableTd {
+	padding: 3px 10px;
+}

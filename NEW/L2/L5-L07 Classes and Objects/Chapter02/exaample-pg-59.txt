@@ -1,0 +1,9 @@
+void Distance::setInches(float y){
+   fInches =y;
+   if (fInches>=12){
+	iFeet+=fInches/12;
+	fInches-=((int)fInches/12)*12;
+   }
+
+
+}

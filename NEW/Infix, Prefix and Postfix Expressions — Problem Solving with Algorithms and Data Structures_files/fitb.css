@@ -1,0 +1,6 @@
+.selectwidthauto {
+	margin: 5px; width: auto !important; display: inline-block !important;
+}
+input.input-validation-error {
+	border: 1px solid rgb(232, 12, 77); border-image: none;
+}

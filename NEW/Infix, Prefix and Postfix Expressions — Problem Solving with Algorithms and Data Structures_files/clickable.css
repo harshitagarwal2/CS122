@@ -1,0 +1,45 @@
+.clickable {
+	cursor: pointer;
+}
+.clickable-clicked {
+	box-shadow: 0px 0px 2px 2px rgba(0,100,0,0.75);
+}
+span.clickable-clicked {
+	background-color: yellow;
+}
+.clickable-clicked td {
+	background-color: rgb(218, 214, 193);
+}
+table {
+	border-collapse: collapse;
+}
+th.clickable {
+	border: 1px solid black; border-image: none;
+}
+td.clickable {
+	border: 1px solid black; border-image: none;
+}
+td.clickable-clicked {
+	background-color: rgb(218, 214, 193);
+}
+td img {
+	margin: 5px;
+}
+.clickable-clicked th {
+	background-color: rgb(218, 214, 193);
+}
+th.clickable-clicked {
+	background-color: rgb(218, 214, 193);
+}
+.clickable-incorrect {
+	border: 1px solid red !important; border-image: none !important; background-color: rgb(242, 222, 222) !important;
+}
+.clickable-incorrect th {
+	border: 1px solid red !important; border-image: none !important; background-color: rgb(242, 222, 222) !important;
+}
+.clickable-incorrect td {
+	border: 1px solid red !important; border-image: none !important; background-color: rgb(242, 222, 222) !important;
+}
+img.clickable-incorrect {
+	box-shadow: 0px 0px 2px 2px rgba(100,0,0,0.75);
+}

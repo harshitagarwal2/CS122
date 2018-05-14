@@ -1,0 +1,54 @@
+.modal-profile {
+	background: rgb(242, 242, 242); padding: 25px; border-radius: 10px; border: 1px solid rgb(255, 255, 255); border-image: none; width: 700px; overflow: hidden; display: none; z-index: 50; min-height: 300px; box-shadow: 0px 2px 7px #292929; -webkit-box-shadow: 0px 2px 7px #292929; -moz-border-radius: 10px; -webkit-border-radius: 10px; -moz-box-shadow: 0px 2px 7px #292929;
+}
+.modal-lightsout {
+	background: rgb(0, 0, 0); left: 0px; top: 0px; width: 100%; display: none; position: absolute; z-index: 25;
+}
+.modal-close-profile {
+	top: 1px; width: 43px; height: 43px; right: 0.5px; display: none; position: absolute; background-image: url("close.png");
+}
+.ac_actions {
+	text-align: center;
+}
+.ac_sep {
+	background: rgb(0, 0, 0); margin: -15px 10px; padding: 0px; border: 0px currentColor; border-image: none; width: 1px; height: 35px; display: inline-block;
+}
+.ac_section {
+	clear: both; position: relative;
+}
+.ac_section > * {
+	margin-right: auto; margin-left: auto; position: relative; max-width: 500pt;
+}
+.ac_section .clearfix {
+	
+}
+.ac_output {
+	display: none; max-width: 450px;
+}
+.ac_caption {
+	text-align: center; font-weight: bold;
+}
+.ac_caption_text {
+	font-weight: normal;
+}
+.ac_caption::before {
+	content: "ActiveCode: " counter(activecode) " "; counter-increment: activecode;
+}
+.active_out {
+	border-radius: 6px; overflow: auto; max-height: 300px; min-width: 20em; background-color: rgb(220, 220, 220);
+}
+.visible-ac-canvas {
+	border: 2px solid black; border-image: none;
+}
+.ac_section > .col-md-12 {
+	max-width: 100% !important;
+}
+.full_width ol {
+	max-width: 100% !important;
+}
+.ac-disabled {
+	pointer-events: none;
+}
+.ac-feedback {
+	border: 1px solid black; border-image: none;
+}

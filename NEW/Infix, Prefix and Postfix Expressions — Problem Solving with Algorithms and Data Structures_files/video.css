@@ -1,0 +1,18 @@
+.exercises {
+	background-color: rgb(240, 255, 255);
+}
+figcaption {
+	font: italic 13px/18px Cambria, Georgia, "Times New Roman", Times, serif; margin: 0.75em 0px; text-align: center; font-size-adjust: none; font-stretch: normal;
+}
+img.bookfig {
+	margin-right: auto; margin-left: auto;
+}
+.cl_caption {
+	text-align: center; font-weight: bold;
+}
+.cl_caption::before {
+	content: "CodeLens: " counter(codelens) " "; counter-increment: codelens;
+}
+body {
+	counter-reset: activecode codelens;
+}

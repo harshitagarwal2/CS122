@@ -1,0 +1,33 @@
+.draggable {
+	border: 1px solid rgb(239, 239, 255); border-image: none; text-align: left; padding-bottom: 10px; font-family: monospace; font-size: 120%; margin-top: 5px; margin-left: 2%; vertical-align: top; float: left; display: inline; min-width: 48%; max-width: 48%; box-sizing: border-box; background-color: rgb(239, 239, 255);
+}
+.drag-button {
+	display: inline-block;
+}
+.drag-reset {
+	color: white; background-color: rgb(71, 73, 73);
+}
+.drag-reset:hover {
+	color: white; background-color: black;
+}
+.drop-incorrect {
+	border: 1px solid red !important; border-image: none !important; background-color: rgb(242, 222, 222) !important;
+}
+:enabled.drag-reset {
+	color: white; background-color: rgb(71, 73, 73);
+}
+.draggable-drag {
+	padding: 10px; border-radius: 10px; border: 1px solid lightgray; border-image: none; margin-top: 5px; display: block; cursor: move; background-color: rgb(239, 239, 239); -moz-border-radius: 10px; -webkit-border-radius: 10px;
+}
+.draggable-feedback {
+	text-align: left !important; clear: both;
+}
+.draggable-drop {
+	padding: 10px; border-radius: 10px; border: 1px solid lightgray; border-image: none; margin-top: 5px; display: block; background-color: rgb(221, 221, 221); -moz-border-radius: 10px; -webkit-border-radius: 10px;
+}
+.draggable-container {
+	text-align: center;
+}
+.possibleDrop {
+	border-color: rgb(0, 0, 0); background-color: rgb(204, 204, 204);
+}

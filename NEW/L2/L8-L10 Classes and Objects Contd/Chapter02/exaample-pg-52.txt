@@ -1,0 +1,25 @@
+ 
+class Distance
+{
+		int iFeet;
+		float fInches;
+	public:
+		void setFeet(int); //prototype only
+		int getFeet(); //prototype only
+		void setInches(float); //prototype only
+		float getInches(); //prototype only
+};
+
+
+after
+
+
+struct Distance
+{
+
+	int iFeet;
+	float fInches;
+
+}
+
+

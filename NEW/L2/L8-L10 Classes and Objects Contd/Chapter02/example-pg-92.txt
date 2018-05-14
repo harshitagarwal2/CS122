@@ -1,0 +1,19 @@
+ namespace X = N1; // declaring an alias
+
+...
+
+...
+
+X::A Aobj;//Aobj is an object of class A enclosed in namespace N1
+
+Aobj.f1();   //invoking a member function of class A
+
+
+...
+
+
+//Modification of alias 
+namespace X = N2; // X now refers to namespace N2
+
+
+X::A Aobj; //Now refers to class A enclosed in namespace N2

@@ -1,0 +1,33 @@
+Before
+
+		void setFeet(int); //prototype only
+
+after
+		void setFeet(Distance * const,int); //prototype only
+
+
+
+Before
+		int getFeet(); //prototype only
+
+
+AFter
+		int getFeet(Distance * const); //prototype only
+		
+Before
+
+		void setInches(float); //prototype only
+
+After
+
+		void setInches(Distance * const,float); //prototype only
+
+
+Before
+
+		float getInches(); //prototype only
+
+AFter
+
+		float getInches(Distance * const); //prototype only
+

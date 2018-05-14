@@ -1,0 +1,21 @@
+.navbar-inverse .brand {
+	color: rgb(255, 255, 255);
+}
+.page-top {
+	top: 0px;
+}
+body {
+	padding-top: 40px;
+}
+.page-top {
+	top: 40px;
+}
+.navbar-inner {
+	padding-right: 12px !important; padding-left: 12px !important;
+}
+table {
+	border: 0px currentColor; border-image: none;
+}
+.footer {
+	width: 100%; padding-top: 10px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}

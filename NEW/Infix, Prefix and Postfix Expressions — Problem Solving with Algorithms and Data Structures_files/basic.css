@@ -1,0 +1,462 @@
+div.clearer {
+	clear: both;
+}
+div.related {
+	width: 100%; font-size: 90%;
+}
+div.related h3 {
+	display: none;
+}
+div.related ul {
+	list-style: none; margin: 0px; padding: 0px 0px 0px 10px;
+}
+div.related li {
+	display: inline;
+}
+div.related li.right {
+	margin-right: 5px; float: right;
+}
+div.sphinxsidebarwrapper {
+	padding: 10px 5px 0px 10px;
+}
+div.sphinxsidebar {
+	width: 230px; font-size: 90%; margin-left: -100%; float: left; -ms-word-wrap: break-word; overflow-wrap: break-word;
+}
+div.sphinxsidebar ul {
+	list-style: none;
+}
+div.sphinxsidebar ul ul {
+	list-style: square; margin-left: 20px;
+}
+div.sphinxsidebar ul.want-points {
+	list-style: square; margin-left: 20px;
+}
+div.sphinxsidebar ul ul {
+	margin-top: 0px; margin-bottom: 0px;
+}
+div.sphinxsidebar form {
+	margin-top: 10px;
+}
+div.sphinxsidebar input {
+	border: 1px solid rgb(152, 219, 204); border-image: none; font-family: sans-serif; font-size: 1em;
+}
+div.sphinxsidebar #searchbox input[type='text'] {
+	width: 170px;
+}
+img {
+	border: 0px currentColor; border-image: none; max-width: 100%;
+}
+ul.search {
+	margin: 10px 0px 0px 20px; padding: 0px;
+}
+ul.search li {
+	background-position: 0px 7px; padding: 5px 0px 5px 20px; background-image: url("file.png"); background-repeat: no-repeat;
+}
+ul.search li a {
+	font-weight: bold;
+}
+ul.search li div.context {
+	margin: 2px 0px 0px 30px; text-align: left; color: rgb(136, 136, 136);
+}
+ul.keywordmatches li.goodmatch a {
+	font-weight: bold;
+}
+table.contentstable {
+	width: 90%;
+}
+table.contentstable p.biglink {
+	line-height: 150%;
+}
+a.biglink {
+	font-size: 1.3em;
+}
+span.linkdescr {
+	padding-top: 5px; font-size: 90%; font-style: italic;
+}
+table.indextable {
+	width: 100%;
+}
+table.indextable td {
+	text-align: left; vertical-align: top;
+}
+table.indextable dl {
+	margin-top: 0px; margin-bottom: 0px;
+}
+table.indextable dd {
+	margin-top: 0px; margin-bottom: 0px;
+}
+table.indextable tr.pcap {
+	height: 10px;
+}
+table.indextable tr.cap {
+	margin-top: 10px; background-color: rgb(242, 242, 242);
+}
+img.toggler {
+	margin-top: 3px; margin-right: 3px; cursor: pointer;
+}
+div.modindex-jumpbox {
+	margin: 1em 0px; padding: 0.4em; border-top-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.genindex-jumpbox {
+	margin: 1em 0px; padding: 0.4em; border-top-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.body p {
+	-ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto;
+}
+div.body dd {
+	-ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto;
+}
+div.body li {
+	-ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto;
+}
+div.body blockquote {
+	-ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto;
+}
+a.headerlink {
+	visibility: hidden;
+}
+h1:hover > a.headerlink {
+	visibility: visible;
+}
+h2:hover > a.headerlink {
+	visibility: visible;
+}
+h3:hover > a.headerlink {
+	visibility: visible;
+}
+h4:hover > a.headerlink {
+	visibility: visible;
+}
+h5:hover > a.headerlink {
+	visibility: visible;
+}
+h6:hover > a.headerlink {
+	visibility: visible;
+}
+dt:hover > a.headerlink {
+	visibility: visible;
+}
+caption:hover > a.headerlink {
+	visibility: visible;
+}
+p.caption:hover > a.headerlink {
+	visibility: visible;
+}
+div.code-block-caption:hover > a.headerlink {
+	visibility: visible;
+}
+div.body p.caption {
+	text-align: inherit;
+}
+div.body td {
+	text-align: left;
+}
+.field-list ul {
+	padding-left: 1em;
+}
+.first {
+	margin-top: 0px !important;
+}
+p.rubric {
+	font-weight: bold; margin-top: 30px;
+}
+img.align-left {
+	clear: left; margin-right: 1em; float: left;
+}
+.align-left.figure {
+	clear: left; margin-right: 1em; float: left;
+}
+object.align-left {
+	clear: left; margin-right: 1em; float: left;
+}
+img.align-right {
+	clear: right; margin-left: 1em; float: right;
+}
+.align-right.figure {
+	clear: right; margin-left: 1em; float: right;
+}
+object.align-right {
+	clear: right; margin-left: 1em; float: right;
+}
+img.align-center {
+	margin-right: auto; margin-left: auto; display: block;
+}
+.align-center.figure {
+	margin-right: auto; margin-left: auto; display: block;
+}
+object.align-center {
+	margin-right: auto; margin-left: auto; display: block;
+}
+.align-left {
+	text-align: left;
+}
+.align-center {
+	text-align: center;
+}
+.align-right {
+	text-align: right;
+}
+div.sidebar {
+	margin: 0px 0px 0.5em 1em; padding: 7px 7px 0px; border: 1px solid rgb(221, 221, 187); border-image: none; width: 40%; float: right; background-color: rgb(255, 255, 238);
+}
+p.sidebar-title {
+	font-weight: bold;
+}
+div.topic {
+	margin: 10px 0px; padding: 7px 7px 0px; border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+p.topic-title {
+	font-size: 1.1em; font-weight: bold; margin-top: 10px;
+}
+div.admonition {
+	padding: 7px; margin-top: 10px; margin-bottom: 10px;
+}
+div.admonition dt {
+	font-weight: bold;
+}
+div.admonition dl {
+	margin-bottom: 0px;
+}
+p.admonition-title {
+	margin: 0px 10px 5px 0px; font-weight: bold;
+}
+div.body p.centered {
+	text-align: center; margin-top: 25px;
+}
+table.docutils {
+	border: 0px currentColor; border-image: none; border-collapse: collapse;
+}
+table caption span.caption-number {
+	font-style: italic;
+}
+table caption span.caption-text {
+	
+}
+table.docutils td {
+	border-width: 0px 0px 1px; border-style: none none solid; border-color: currentColor currentColor rgb(170, 170, 170); padding: 1px 8px 1px 5px;
+}
+table.docutils th {
+	border-width: 0px 0px 1px; border-style: none none solid; border-color: currentColor currentColor rgb(170, 170, 170); padding: 1px 8px 1px 5px;
+}
+table.field-list td {
+	border: 0px currentColor !important; border-image: none !important;
+}
+table.field-list th {
+	border: 0px currentColor !important; border-image: none !important;
+}
+table.footnote td {
+	border: 0px currentColor !important; border-image: none !important;
+}
+table.footnote th {
+	border: 0px currentColor !important; border-image: none !important;
+}
+th {
+	text-align: left; padding-right: 5px;
+}
+table.citation {
+	margin-left: 1px; border-left-color: gray; border-left-width: 1px; border-left-style: solid;
+}
+table.citation td {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+div.figure {
+	margin: 0.5em; padding: 0.5em;
+}
+div.figure p.caption {
+	padding: 0.3em;
+}
+div.figure p.caption span.caption-number {
+	font-style: italic;
+}
+div.figure p.caption span.caption-text {
+	
+}
+ol.arabic {
+	list-style: decimal;
+}
+ol.loweralpha {
+	list-style: lower-alpha;
+}
+ol.upperalpha {
+	list-style: upper-alpha;
+}
+ol.lowerroman {
+	list-style: lower-roman;
+}
+ol.upperroman {
+	list-style: upper-roman;
+}
+dl {
+	margin-bottom: 15px;
+}
+dd p {
+	margin-top: 0px;
+}
+dd ul {
+	margin-bottom: 10px;
+}
+dd table {
+	margin-bottom: 10px;
+}
+dd {
+	margin-top: 3px; margin-bottom: 10px; margin-left: 30px;
+}
+dt:target {
+	background-color: rgb(251, 229, 78);
+}
+.highlighted {
+	background-color: rgb(251, 229, 78);
+}
+dl.glossary dt {
+	font-size: 1.1em; font-weight: bold;
+}
+.field-list ul {
+	margin: 0px; padding-left: 1em;
+}
+.field-list p {
+	margin: 0px;
+}
+.optional {
+	font-size: 1.3em;
+}
+.sig-paren {
+	font-size: larger;
+}
+.versionmodified {
+	font-style: italic;
+}
+.system-message {
+	padding: 5px; border: 3px solid red; border-image: none; background-color: rgb(255, 221, 170);
+}
+:target.footnote {
+	background-color: rgb(255, 255, 170);
+}
+.line-block {
+	margin-top: 1em; margin-bottom: 1em; display: block;
+}
+.line-block .line-block {
+	margin-top: 0px; margin-bottom: 0px; margin-left: 1.5em;
+}
+.guilabel {
+	font-family: sans-serif;
+}
+.menuselection {
+	font-family: sans-serif;
+}
+.accelerator {
+	text-decoration: underline;
+}
+.classifier {
+	font-style: oblique;
+}
+abbr {
+	border-bottom-color: currentColor; border-bottom-width: 1px; border-bottom-style: dotted; cursor: help;
+}
+acronym {
+	border-bottom-color: currentColor; border-bottom-width: 1px; border-bottom-style: dotted; cursor: help;
+}
+pre {
+	overflow: auto; -ms-overflow-y: hidden;
+}
+td.linenos pre {
+	padding: 5px 0px; border: 0px currentColor; border-image: none; color: rgb(170, 170, 170); background-color: transparent;
+}
+table.highlighttable {
+	margin-left: 0.5em;
+}
+table.highlighttable td {
+	padding: 0px 0.5em;
+}
+div.code-block-caption {
+	padding: 2px 5px; font-size: small;
+}
+div.code-block-caption code {
+	background-color: transparent;
+}
+div.code-block-caption + div > div.highlight > pre {
+	margin-top: 0px;
+}
+div.code-block-caption span.caption-number {
+	padding: 0.1em 0.3em; font-style: italic;
+}
+div.code-block-caption span.caption-text {
+	
+}
+div.literal-block-wrapper {
+	padding: 1em 1em 0px;
+}
+div.literal-block-wrapper div.highlight {
+	margin: 0px;
+}
+code.descname {
+	font-size: 1.2em; font-weight: bold; background-color: transparent;
+}
+code.descclassname {
+	background-color: transparent;
+}
+code.xref {
+	font-weight: bold; background-color: transparent;
+}
+a code {
+	font-weight: bold; background-color: transparent;
+}
+h1 code {
+	background-color: transparent;
+}
+h2 code {
+	background-color: transparent;
+}
+h3 code {
+	background-color: transparent;
+}
+h4 code {
+	background-color: transparent;
+}
+h5 code {
+	background-color: transparent;
+}
+h6 code {
+	background-color: transparent;
+}
+.viewcode-link {
+	float: right;
+}
+.viewcode-back {
+	font-family: sans-serif; float: right;
+}
+div:target.viewcode-block {
+	margin: -1px -10px; padding: 0px 10px;
+}
+img.math {
+	vertical-align: middle;
+}
+div.body div.math p {
+	text-align: center;
+}
+span.eqno {
+	float: right;
+}
+@media print
+{
+div.document {
+	margin: 0px !important; width: 100%;
+}
+div.documentwrapper {
+	margin: 0px !important; width: 100%;
+}
+div.bodywrapper {
+	margin: 0px !important; width: 100%;
+}
+div.sphinxsidebar {
+	display: none;
+}
+div.related {
+	display: none;
+}
+div.footer {
+	display: none;
+}
+#top-link {
+	display: none;
+}
+}

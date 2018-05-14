@@ -1,0 +1,34 @@
+Before
+
+void Distance::setFeet(int x) //definition
+{
+	iFeet=x;
+}
+
+After
+
+void setFeet(Distance * const this, int x) //definition
+{
+	this->iFeet=x;
+}
+
+
+
+Before
+
+int Distance::getFeet() //definition
+{
+	return iFeet;
+}
+
+
+
+void Distance::setInches(float y) //definition
+{
+	fInches=y;
+}
+float Distance::getInches() //definition
+{
+	return fInches;
+}
+/*End of Distlib.cpp*/

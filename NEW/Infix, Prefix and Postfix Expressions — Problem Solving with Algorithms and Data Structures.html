@@ -1,0 +1,889 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0100)http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html -->
+<!DOCTYPE html PUBLIC "" ""><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+     
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">         
+<TITLE>3.9. Infix, Prefix and Postfix Expressions — Problem Solving with 
+Algorithms and Data Structures</TITLE>         <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/basic.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/pygments.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/bootstrap.min.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/video.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/codemirror.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/activecode.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/poll.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/pytutor.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/modal-basic.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/datafile.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/parsons.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/prettify.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/dragndrop.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/fitb.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/clickable.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/codemirror.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/livecode.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/tabbedstuff.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery-ui-1.10.3.custom.min.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/bootstrap-sphinx.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/user-highlights.css" 
+rel="stylesheet" type="text/css">     <LINK href="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/runestone-custom-sphinx-bootstrap.css" 
+rel="stylesheet" type="text/css">         
+<SCRIPT type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/runestonebase.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/underscore.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/doctools.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/mchoice.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timedmc.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timed.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery.highlight.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/bookfuncs.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/codemirror.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/xml.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/css.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/htmlmixed.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/python.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/javascript.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/activecode.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/skulpt.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/skulpt-stdlib.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/clike.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timed_activecode.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/poll.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/d3.v2.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery.ba-bbq.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery.jsPlumb-1.3.10-all-min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/pytutor.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/codelens.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/skulpt.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/skulpt-stdlib.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/datafile.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/prettify.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/hammer.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/parsons.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timedparsons.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/dragndrop.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timeddnd.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/fitb.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timedfitb.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/reveal.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/shortanswer.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timed_shortanswer.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/clickable.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/timedclickable.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/animationbase.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/livecode.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/clike.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/tabbedstuff.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/MathJax.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery-fix.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/bootstrap.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/bootstrap-sphinx.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/waypoints.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/rangy-core.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/rangy-textrange.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/rangy-cssclassapplier.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/user-highlights.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery.idle-timer.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/processing-1.4.1.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery.hotkey.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/jquery-migrate-1.2.1.min.js" type="text/javascript"></SCRIPT>
+     <LINK title="Problem Solving with Algorithms and Data Structures" href="../index.html" 
+rel="top">     <LINK title="3. Basic Data Structures" href="toctree.html" rel="up"> 
+    <LINK title="3.10. What Is a Queue?" href="WhatIsaQueue.html" rel="next">    
+ <LINK title="3.8. Converting Decimal Numbers to Binary Numbers" href="ConvertingDecimalNumberstoBinaryNumbers.html" 
+rel="prev">  
+<META http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<META name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+<SCRIPT type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://interactivepython.org' ? 'http://interactivepython.org' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'pythonds';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "3.6.0";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'pythonds';
+  eBookConfig.runestone_version = '2.7.7';
+</SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18538"></HEAD>
+<BODY role="document">
+<DIV id="fb-root"></DIV>
+<SCRIPT>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</SCRIPT>
+     <!-- Begin navbar --> 
+<DIV class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+<DIV class="container">
+<DIV class="navbar-header"><!-- .btn-navbar is used as the toggle for collapsed navbar content --> 
+      <BUTTON class="navbar-toggle" type="button" data-toggle="collapse" 
+data-target=".navbar-ex1-collapse"><SPAN class="icon-bar"></SPAN><SPAN class="icon-bar"></SPAN><SPAN 
+class="icon-bar"></SPAN></BUTTON>       
+<DIV><A class="brand-logo" style='background: url("../_static/img/logo_small.png") no-repeat 0px 0px;' 
+href="http://interactivepython.org/runestone/default/user/login">&nbsp; </A><A 
+class="navbar-brand" href="http://interactivepython.org/runestone/static/pythonds/index.html">Problem 
+Solving with Algorithms and Data Structures</A>       </DIV></DIV>
+<DIV class="navbar-collapse collapse navbar-ex1-collapse">
+<UL class="nav navbar-nav navbar-right">
+  <LI class="divider-vertical"></LI><!-- social media dropdown -->         
+  <LI class="dropdown"><A class="dropdown-toggle" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#" 
+  data-toggle="dropdown"><I class="glyphicon glyphicon-share-alt" style="opacity: 0.9;"></I> 
+            </A>
+  <UL class="dropdown-menu social-menu">
+    <LI>
+    <DIV><B>Runestone in social media:</B>                 </DIV><A class="twitter-follow-button" 
+    href="https://twitter.com/iRunestone" data-show-count="true">Follow 
+    @iRunestone</A>
+<SCRIPT>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</SCRIPT>
+                     
+    <DIV class="fb-like" data-font="arial" data-show-faces="false" data-width="300" 
+    data-layout="button_count" data-send="false" data-href="https://www.facebook.com/RunestoneInteractive"></DIV></LI>
+    <LI class="divider"></LI>
+    <LI>
+    <DIV><B>Help support us:</B>                 </DIV>
+    <DIV>
+    <FORM action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><INPUT name="cmd" type="hidden" value="_s-xclick"> 
+                      <INPUT name="encrypted" type="hidden" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----&#10;                  "> 
+                      <INPUT name="submit" type="image" alt="PayPal - The safer, easier way to pay online!" 
+    src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/btn_donate_SM.gif" 
+    border="0">                   <IMG width="1" height="1" alt="" src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/pixel.gif" 
+    border="0">                   </FORM></DIV></LI></UL></LI><!-- end social media dropdown --> 
+          
+  <LI class="divider-vertical"></LI><!-- search dropdown -->         
+  <LI class="dropdown"><A class="dropdown-toggle" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#" 
+  data-toggle="dropdown"><I class="glyphicon glyphicon-search" style="opacity: 0.9;"></I> 
+            </A>
+  <UL class="dropdown-menu">
+    <LI><A href="http://interactivepython.org/runestone/static/pythonds/index.html">Table 
+    of Contents</A></LI>
+    <LI><A href="http://interactivepython.org/runestone/static/pythonds/genindex.html">Book 
+    Index</A></LI>
+    <LI class="divider"></LI>
+    <LI id="scratch_ac_link"><A href="javascript:ACFactory.toggleScratchActivecode()">Scratch 
+    ActiveCode</A></LI>
+    <LI class="divider"></LI>
+    <LI style="width: 240px;">
+    <FORM class="navbar-search" style="margin: 10px;" action="../search.html" 
+    method="get">
+    <DIV 
+class="input-group"><INPUT name="q" class="form-control" type="text" placeholder="Search this book" value=""> 
+                      <SPAN class="input-group-btn"><BUTTON class="btn btn-primary" 
+    style="margin: 0px;" type="submit"><I 
+    class="glyphicon glyphicon-search"></I>                     </BUTTON>        
+               </SPAN>                 </DIV><!-- /input-group -->               
+      <INPUT name="check_keywords" type="hidden" value="yes">                 
+<INPUT name="area" type="hidden" value="default">               
+  </FORM></LI></UL></LI><!-- end search dropdown -->         
+  <LI class="divider-vertical"></LI><!-- user account dropdown -->         
+  <LI class="dropdown"><A class="dropdown-toggle" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#" 
+  data-toggle="dropdown"><I class="glyphicon glyphicon-user" style="opacity: 0.9;"></I> 
+            </A>
+  <UL class="dropdown-menu user-menu">
+    <LI><SPAN class="loggedinuser"></SPAN></LI>
+    <LI class="divider"></LI>
+    <LI><A href="http://interactivepython.org/runestone/default/courses">Change 
+    Course</A></LI><!--
+            <li class="divider"></li>
+            <li><a href='http://interactivepython.org/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://interactivepython.org/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://interactivepython.org/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://interactivepython.org/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li> -->
+    			 
+    <LI class="divider"></LI>
+    <LI><A 
+    href="http://interactivepython.org/runestone/admin/index">Instructor's 
+    Page</A></LI>
+    <LI><A 
+    href="http://interactivepython.org/runestone/assignments/index">Progress 
+    Page</A></LI>
+    <LI class="divider"></LI>
+    <LI><A id="profilelink" href="http://interactivepython.org/runestone/default/user/profile">Edit 
+    Profile</A></LI>
+    <LI><A id="passwordlink" href="http://interactivepython.org/runestone/default/user/change_password">Change 
+    Password</A></LI>
+    <LI><A id="registerlink" href="http://interactivepython.org/runestone/default/user/register">Register</A></LI>
+    <LI class="loginout"><A href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#">Login</A></LI><!-- correct link populated by addNavbarLoginLink() --> 
+              </UL></LI><!-- end user account dropdown -->                 
+  <LI class="divider-vertical"></LI><!-- help menu dropdown -->         
+  <LI class="dropdown"><A class="dropdown-toggle" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#" 
+  data-toggle="dropdown"><I class="glyphicon glyphicon-question-sign" style="opacity: 0.9;"></I> 
+            </A>
+  <UL class="dropdown-menu user-menu">
+    <LI><A href="http://interactivepython.org/runestone/static/pythonds/navhelp.html">Navigation 
+    Help</A></LI>
+    <LI><A href="http://interactivepython.org/runestone/static/overview/instructor.html">Help 
+    for Instructors</A></LI>
+    <LI class="divider"></LI>
+    <LI><A href="http://runestoneinteractive.org/">About Runestone</A></LI>
+    <LI><A href="http://interactivepython.org/runestone/default/reportabug?course=pythonds&amp;page=InfixPrefixandPostfixExpressions">Report 
+    A Problem</A></LI></UL></LI><!-- end help menu dropdown -->         
+  <LI class="divider-vertical"></LI></UL>
+<UL class="nav navbar-nav">
+  <LI class="divider-vertical"></LI>
+  <LI class="dropdown globaltoc-container"><A class="dropdown-toggle" href="http://interactivepython.org/runestone/static/pythonds/index.html" 
+  data-toggle="dropdown">Chapters <B class="caret"></B></A>
+  <UL class="dropdown-menu globaltoc">
+    <UL class="current">
+      <LI class="toctree-l1"><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/Introduction/toctree.html">1. 
+      Introduction</A></LI>
+      <LI class="toctree-l1"><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/toctree.html">2. 
+      Analysis</A></LI>
+      <LI class="toctree-l1 current"><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/toctree.html">3. 
+      Basic Data Structures</A></LI>
+      <LI class="toctree-l1"><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/Recursion/toctree.html">4. 
+      Recursion</A></LI>
+      <LI class="toctree-l1"><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/toctree.html">5. 
+      Sorting and Searching</A></LI>
+      <LI class="toctree-l1"><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/Trees/toctree.html">6. 
+      Trees and Tree Algorithms</A></LI>
+      <LI class="toctree-l1"><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/Graphs/toctree.html">7. 
+      Graphs and Graph Algorithms</A></LI></UL></UL></LI>
+  <LI class="divider-vertical"></LI><!--
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 3.8. Converting Decimal Numbers to Binary Numbers" data-toggle="tooltip">
+    <a href="ConvertingDecimalNumberstoBinaryNumbers.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 3.10. What Is a Queue?' data-toggle="tooltip" >
+    <a href="WhatIsaQueue.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        --> 
+                    
+  <LI></LI></UL></DIV></DIV></DIV>
+<DIV class="container" id="continue-reading"></DIV>
+<DIV class="container" id="main-content">
+<DIV class="section" id="infix-prefix-and-postfix-expressions">
+<H1>3.9. Infix, Prefix and Postfix Expressions<A title="Permalink to this headline" 
+class="headerlink" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#infix-prefix-and-postfix-expressions">¶</A></H1>
+<P>When you write an arithmetic expression such as B * C, the form of the
+ expression provides you with information so that you can interpret it
+ correctly. In this case we know that the variable B is being multiplied by the 
+variable C since the multiplication operator * appears between them in the 
+expression. This type of notation is referred to as <STRONG>infix</STRONG> since 
+the operator is <EM>in between</EM> the two operands that it is working on.</P>
+<P>Consider another infix example, A + B * C. The operators + and * still appear 
+between the operands, but there is a problem. Which operands do they work on? 
+Does the + work on A and B or does the * take B and C? The expression seems 
+ambiguous.</P>
+<P>In fact, you have been reading and writing these types of expressions for a 
+long time and they do not cause you any problem. The reason for this is that you 
+know something about the operators + and *. Each operator has a 
+<STRONG>precedence</STRONG> level. Operators of higher precedence are used 
+before operators of lower precedence. The only thing that can change that order 
+is the presence of parentheses. The precedence order for arithmetic operators 
+places multiplication and division above addition and subtraction. If two 
+operators of equal precedence appear, then a left-to-right ordering or 
+associativity is used.</P>
+<P>Let’s interpret the troublesome expression A + B * C using operator
+ precedence. B and C are multiplied first, and A is then added to that result. 
+(A + B) * C would force the addition of A and B to be done first before the 
+multiplication. In expression A + B + C, by precedence (via associativity), the 
+leftmost + would be done first.</P>
+<P>Although all this may be obvious to you, remember that computers need to know 
+exactly what operators to perform and in what order. One way to write an 
+expression that guarantees there will be no confusion with respect to the order 
+of operations is to create what is called a <STRONG>fully parenthesized</STRONG> 
+expression. This type of expression uses one pair of parentheses for each 
+operator. The parentheses dictate the order of operations; there is no 
+ambiguity. There is also no need to remember any precedence rules.</P>
+<P>The expression A + B * C + D can be rewritten as ((A + (B * C)) + D) to show 
+that the multiplication happens first, followed by the leftmost addition. A + B 
++ C + D can be written as (((A + B) + C) + D) since the addition operations 
+associate from left to right.</P>
+<P>There are two other very important expression formats that may not seem
+ obvious to you at first. Consider the infix expression A + B. What would happen 
+if we moved the operator before the two operands? The resulting expression would 
+be + A B. Likewise, we could move the operator to the end. We would get A B +. 
+These look a bit strange.</P>
+<P>These changes to the position of the operator with respect to the operands 
+create two new expression formats, <STRONG>prefix</STRONG> and 
+<STRONG>postfix</STRONG>. Prefix expression notation requires that all operators 
+precede the two operands that they work on. Postfix, on the other hand, requires 
+that its operators come after the corresponding operands. A few more examples
+ should help to make this a bit clearer (see <A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#tbl-example1"><SPAN 
+class="std std-ref">Table 2</SPAN></A>).</P>
+<P>A + B * C would be written as + A * B C in prefix. The multiplication
+ operator comes immediately before the operands B and C, denoting that * has 
+precedence over +. The addition operator then appears before the A and the 
+result of the multiplication.</P>
+<P>In postfix, the expression would be A B C * +. Again, the order of operations 
+is preserved since the * appears immediately after the B and the C, denoting 
+that * has precedence, with + coming after. Although the operators moved and now 
+appear either before or after their respective operands, the order of the 
+operands stayed exactly the same relative to one another.</P><SPAN id="tbl-example1"></SPAN>
+<TABLE class="docutils" id="id1" border="1"> 
+  <CAPTION><SPAN class="caption-text"><STRONG>Table 2: Examples of Infix, 
+  Prefix, and Postfix</STRONG></SPAN><A title="Permalink to this table" class="headerlink" 
+  href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#id1">¶</A></CAPTION>
+  <COLGROUP>
+  <COL width="37%">
+  <COL width="31%">
+  <COL width="32%"></COLGROUP>
+  <THEAD valign="bottom">
+  <TR class="row-odd">
+    <TH class="head"><STRONG>Infix Expression</STRONG></TH>
+    <TH class="head"><STRONG>Prefix Expression</STRONG></TH>
+    <TH class="head"><STRONG>Postfix Expression</STRONG></TH></TR></THEAD>
+  <TBODY valign="top">
+  <TR class="row-even">
+    <TD>A + B</TD>
+    <TD>+ A B</TD>
+    <TD>A B +</TD></TR>
+  <TR class="row-odd">
+    <TD>A + B * C</TD>
+    <TD>+ A * B C</TD>
+    <TD>A B C * +</TD></TR></TBODY></TABLE>
+<P>Now consider the infix expression (A + B) * C. Recall that in this case, 
+infix requires the parentheses to force the performance of the addition before 
+the multiplication. However, when A + B was written in prefix, the addition 
+operator was simply moved before the operands, + A B. The result of this 
+operation becomes the first operand for the multiplication. The multiplication 
+operator is moved in front of the entire expression, giving us * + A B C. 
+Likewise, in postfix A B + forces the addition to happen first. The 
+multiplication can be done to that result and the remaining operand C. The 
+proper postfix expression is then A B + C *.</P>
+<P>Consider these three expressions again (see <A class="reference internal" 
+href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#tbl-parexample"><SPAN 
+class="std std-ref">Table 3</SPAN></A>). Something very important has happened. 
+Where did the parentheses go? Why don’t we need them in prefix and postfix? The 
+answer is that the operators are no longer ambiguous with respect to the 
+operands that they work on. Only infix notation requires the additional symbols. 
+The order of operations within prefix and postfix expressions is completely
+ determined by the position of the operator and nothing else. In many ways, this 
+makes infix the least desirable notation to use.</P><SPAN 
+id="tbl-parexample"></SPAN>
+<TABLE class="docutils" id="id2" border="1"> 
+  <CAPTION><SPAN class="caption-text"><STRONG>Table 3: An Expression with 
+  Parentheses</STRONG></SPAN><A title="Permalink to this table" class="headerlink" 
+  href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#id2">¶</A></CAPTION>
+  <COLGROUP>
+  <COL width="37%">
+  <COL width="31%">
+  <COL width="32%"></COLGROUP>
+  <THEAD valign="bottom">
+  <TR class="row-odd">
+    <TH class="head"><STRONG>Infix Expression</STRONG></TH>
+    <TH class="head"><STRONG>Prefix Expression</STRONG></TH>
+    <TH class="head"><STRONG>Postfix Expression</STRONG></TH></TR></THEAD>
+  <TBODY valign="top">
+  <TR class="row-even">
+    <TD>(A + B) * C</TD>
+    <TD>* + A B C</TD>
+    <TD>A B + C *</TD></TR></TBODY></TABLE>
+<P><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#tbl-example3"><SPAN 
+class="std std-ref">Table 4</SPAN></A> shows some additional examples of infix 
+expressions and the equivalent prefix and postfix expressions. Be sure that you
+ understand how they are equivalent in terms of the order of the operations 
+being performed.</P><SPAN id="tbl-example3"></SPAN>
+<TABLE class="docutils" id="id3" border="1"> 
+  <CAPTION><SPAN class="caption-text"><STRONG>Table 4: Additional Examples of 
+  Infix, Prefix, and Postfix</STRONG></SPAN><A title="Permalink to this table" 
+  class="headerlink" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#id3">¶</A></CAPTION>
+  <COLGROUP>
+  <COL width="37%">
+  <COL width="31%">
+  <COL width="32%"></COLGROUP>
+  <THEAD valign="bottom">
+  <TR class="row-odd">
+    <TH class="head"><STRONG>Infix Expression</STRONG></TH>
+    <TH class="head"><STRONG>Prefix Expression</STRONG></TH>
+    <TH class="head"><STRONG>Postfix Expression</STRONG></TH></TR></THEAD>
+  <TBODY valign="top">
+  <TR class="row-even">
+    <TD>A + B * C + D</TD>
+    <TD>+ + A * B C D</TD>
+    <TD>A B C * + D +</TD></TR>
+  <TR class="row-odd">
+    <TD>(A + B) * (C + D)</TD>
+    <TD>* + A B + C D</TD>
+    <TD>A B + C D + *</TD></TR>
+  <TR class="row-even">
+    <TD>A * B + C * D</TD>
+    <TD>+ * A B * C D</TD>
+    <TD>A B * C D * +</TD></TR>
+  <TR class="row-odd">
+    <TD>A + B + C + D</TD>
+    <TD>+ + + A B C D</TD>
+    <TD>A B + C + D +</TD></TR></TBODY></TABLE>
+<DIV class="section" id="conversion-of-infix-expressions-to-prefix-and-postfix">
+<H2>3.9.1. Conversion of Infix Expressions to Prefix and Postfix<A title="Permalink to this headline" 
+class="headerlink" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#conversion-of-infix-expressions-to-prefix-and-postfix">¶</A></H2>
+<P>So far, we have used ad hoc methods to convert between infix expressions and 
+the equivalent prefix and postfix expression notations. As you might expect, 
+there are algorithmic ways to perform the conversion that allow any expression 
+of any complexity to be correctly transformed.</P>
+<P>The first technique that we will consider uses the notion of a fully
+ parenthesized expression that was discussed earlier. Recall that A + B * C can 
+be written as (A + (B * C)) to show explicitly that the multiplication has 
+precedence over the addition. On closer observation, however, you can see that 
+each parenthesis pair also denotes the beginning and the end of an operand pair 
+with the corresponding operator in the middle.</P>
+<P>Look at the right parenthesis in the subexpression (B * C) above. If we were 
+to move the multiplication symbol to that position and remove the matching left 
+parenthesis, giving us B C *, we would in effect have converted the 
+subexpression to postfix notation. If the addition operator were also moved to 
+its corresponding right parenthesis position and the matching left parenthesis 
+were removed, the complete postfix expression would result (see <A class="reference internal" 
+href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#fig-moveright"><SPAN 
+class="std std-ref">Figure 6</SPAN></A>).</P>
+<DIV class="figure align-center" id="id4"><SPAN id="fig-moveright"></SPAN><IMG 
+alt="../_images/moveright.png" src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/moveright.png"> 
+<P class="caption"><SPAN class="caption-text">Figure 6: Moving Operators to the 
+Right for Postfix Notation</SPAN></P></DIV>
+<P>If we do the same thing but instead of moving the symbol to the position of 
+the right parenthesis, we move it to the left, we get prefix notation (see <A 
+class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#fig-moveleft"><SPAN 
+class="std std-ref">Figure 7</SPAN></A>). The position of the parenthesis pair 
+is actually a clue to the final position of the enclosed operator.</P>
+<DIV class="figure align-center" id="id5"><SPAN id="fig-moveleft"></SPAN><IMG 
+alt="../_images/moveleft.png" src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/moveleft.png"> 
+<P class="caption"><SPAN class="caption-text">Figure 7: Moving Operators to the 
+Left for Prefix Notation</SPAN></P></DIV>
+<P>So in order to convert an expression, no matter how complex, to either prefix 
+or postfix notation, fully parenthesize the expression using the order of 
+operations. Then move the enclosed operator to the position of either the left 
+or the right parenthesis depending on whether you want prefix or postfix 
+notation.</P>
+<P>Here is a more complex expression: (A + B) * C - (D - E) * (F + G). <A class="reference internal" 
+href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#fig-complexmove"><SPAN 
+class="std std-ref">Figure 8</SPAN></A> shows the conversion to postfix and 
+prefix notations.</P>
+<DIV class="figure align-center" id="id6"><SPAN id="fig-complexmove"></SPAN><IMG 
+alt="../_images/complexmove.png" src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/complexmove.png"> 
+<P class="caption"><SPAN class="caption-text">Figure 8: Converting a Complex 
+Expression to Prefix and Postfix Notations</SPAN></P></DIV></DIV>
+<DIV class="section" id="general-infix-to-postfix-conversion">
+<H2>3.9.2. General Infix-to-Postfix Conversion<A title="Permalink to this headline" 
+class="headerlink" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#general-infix-to-postfix-conversion">¶</A></H2>
+<P>We need to develop an algorithm to convert any infix expression to a postfix 
+expression. To do this we will look closer at the conversion process.</P>
+<P>Consider once again the expression A + B * C. As shown above, A B C * + is 
+the postfix equivalent. We have already noted that the operands A, B, and C stay 
+in their relative positions. It is only the operators that change position. 
+Let’s look again at the operators in the infix expression. The first operator 
+that appears from left to right is +. However, in the postfix expression, + is 
+at the end since the next operator, *, has precedence over addition. The order 
+of the operators in the original expression is reversed in the resulting postfix
+ expression.</P>
+<P>As we process the expression, the operators have to be saved somewhere since 
+their corresponding right operands are not seen yet. Also, the order of these 
+saved operators may need to be reversed due to their precedence. This is the 
+case with the addition and the multiplication in this example. Since the 
+addition operator comes before the multiplication operator and has lower 
+precedence, it needs to appear after the multiplication operator is used. 
+Because of this reversal of order, it makes sense to consider using a stack to 
+keep the operators until they are needed.</P>
+<P>What about (A + B) * C? Recall that A B + C * is the postfix equivalent. 
+Again, processing this infix expression from left to right, we see + first. In 
+this case, when we see *, + has already been placed in the result expression 
+because it has precedence over * by virtue of the parentheses. We can now start 
+to see how the conversion algorithm will work. When we see a left parenthesis, 
+we will save it to denote that another operator of high precedence will be 
+coming. That operator will need to wait until the corresponding right 
+parenthesis appears to denote its position (recall the fully parenthesized 
+technique). When that right parenthesis does appear, the operator can be popped 
+from the stack.</P>
+<P>As we scan the infix expression from left to right, we will use a stack to 
+keep the operators. This will provide the reversal that we noted in the first 
+example. The top of the stack will always be the most recently saved operator. 
+Whenever we read a new operator, we will need to consider how that operator 
+compares in precedence with the operators, if any, already on the stack.</P>
+<P>Assume the infix expression is a string of tokens delimited by spaces. The 
+operator tokens are *, /, +, and -, along with the left and right parentheses, ( 
+and ). The operand tokens are the single-character identifiers A, B, C, and so 
+on. The following steps will produce a string of tokens in postfix order.</P>
+<OL class="arabic simple">
+  <LI>Create an empty stack called <CODE class="docutils literal"><SPAN class="pre">opstack</SPAN></CODE> 
+  for keeping operators. Create an empty list for output.</LI>
+  <LI>Convert the input infix string to a list by using the string method <CODE 
+  class="docutils literal"><SPAN class="pre">split</SPAN></CODE>.</LI>
+  <LI>Scan the token list from left to right.
+  <UL>
+    <LI>If the token is an operand, append it to the end of the output
+ list.</LI>
+    <LI>If the token is a left parenthesis, push it on the <CODE class="docutils literal"><SPAN 
+    class="pre">opstack</SPAN></CODE>.</LI>
+    <LI>If the token is a right parenthesis, pop the <CODE class="docutils literal"><SPAN 
+    class="pre">opstack</SPAN></CODE> until the corresponding left parenthesis 
+    is removed. Append each operator to the end of the output list.</LI>
+    <LI>If the token is an operator, *, /, +, or -, push it on the <CODE class="docutils literal"><SPAN 
+    class="pre">opstack</SPAN></CODE>. However, first remove any operators 
+    already on the <CODE class="docutils literal"><SPAN 
+    class="pre">opstack</SPAN></CODE> that have higher or equal precedence and 
+    append them to the output list.</LI></UL></LI>
+  <LI>When the input expression has been completely processed, check the <CODE 
+  class="docutils literal"><SPAN class="pre">opstack</SPAN></CODE>. Any 
+  operators still on the stack can be removed and appended to the end of the 
+  output list.</LI></OL>
+<P><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#fig-intopost"><SPAN 
+class="std std-ref">Figure 9</SPAN></A> shows the conversion algorithm working 
+on the expression A * B + C * D. Note that the first * operator is removed upon 
+seeing the + operator. Also, + stays on the stack when the second * occurs, 
+since multiplication has precedence over addition. At the end of the infix 
+expression the stack is popped twice, removing both operators and placing + as 
+the last operator in the postfix expression.</P>
+<DIV class="figure align-center" id="id7"><SPAN id="fig-intopost"></SPAN><IMG 
+alt="../_images/intopost.png" src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/intopost.png"> 
+<P class="caption"><SPAN class="caption-text">Figure 9: Converting A * B + C * D 
+to Postfix Notation</SPAN></P></DIV>
+<P>In order to code the algorithm in Python, we will use a dictionary called 
+<CODE class="docutils literal"><SPAN class="pre">prec</SPAN></CODE> to hold the 
+precedence values for the operators. This dictionary will map each operator to 
+an integer that can be compared against the precedence levels of other operators 
+(we have arbitrarily used the integers 3, 2, and 1). The left parenthesis will 
+receive the lowest value possible. This way any operator that is compared 
+against it will have higher precedence and will be placed on top of it. Line 15 
+defines the operands to be any upper-case character or digit. The complete 
+conversion function is shown in <A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#lst-intopost"><SPAN 
+class="std std-ref">ActiveCode 1</SPAN></A>.</P>
+<DIV class="explainer ac_section alert alert-warning" data-childcomponent="intopost"><TEXTAREA id="intopost" data-caption="Converting Infix Expressions to Postfix Expressions" data-audio="" data-timelimit="25000" data-lang="python" data-component="activecode">from pythonds.basic.stack import Stack
+
+def infixToPostfix(infixexpr):
+    prec = {}
+    prec["*"] = 3
+    prec["/"] = 3
+    prec["+"] = 2
+    prec["-"] = 2
+    prec["("] = 1
+    opStack = Stack()
+    postfixList = []
+    tokenList = infixexpr.split()
+
+    for token in tokenList:
+        if token in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" or token in "0123456789":
+            postfixList.append(token)
+        elif token == '(':
+            opStack.push(token)
+        elif token == ')':
+            topToken = opStack.pop()
+            while topToken != '(':
+                postfixList.append(topToken)
+                topToken = opStack.pop()
+        else:
+            while (not opStack.isEmpty()) and \
+               (prec[opStack.peek()] &gt;= prec[token]):
+                  postfixList.append(opStack.pop())
+            opStack.push(token)
+
+    while not opStack.isEmpty():
+        postfixList.append(opStack.pop())
+    return " ".join(postfixList)
+
+print(infixToPostfix("A * B + C * D"))
+print(infixToPostfix("( A + B ) * C - ( D - E ) * ( F + G )"))
+</TEXTAREA> 
+</DIV>
+<HR class="docutils">
+
+<P>A few more examples of execution in the Python shell are shown below.</P>
+<DIV class="highlight-default">
+<DIV class="highlight">
+<PRE><SPAN></SPAN><SPAN class="gp">&gt;&gt;&gt; </SPAN><SPAN class="n">infixtopostfix</SPAN><SPAN class="p">(</SPAN><SPAN class="s2">"( A + B ) * ( C + D )"</SPAN><SPAN class="p">)</SPAN>
+<SPAN class="go">'A B + C D + *'</SPAN>
+<SPAN class="gp">&gt;&gt;&gt; </SPAN><SPAN class="n">infixtopostfix</SPAN><SPAN class="p">(</SPAN><SPAN class="s2">"( A + B ) * C"</SPAN><SPAN class="p">)</SPAN>
+<SPAN class="go">'A B + C *'</SPAN>
+<SPAN class="gp">&gt;&gt;&gt; </SPAN><SPAN class="n">infixtopostfix</SPAN><SPAN class="p">(</SPAN><SPAN class="s2">"A + B * C"</SPAN><SPAN class="p">)</SPAN>
+<SPAN class="go">'A B C * +'</SPAN>
+<SPAN class="go">&gt;&gt;&gt;</SPAN>
+</PRE></DIV></DIV></DIV>
+<DIV class="section" id="postfix-evaluation">
+<H2>3.9.3. Postfix Evaluation<A title="Permalink to this headline" class="headerlink" 
+href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#postfix-evaluation">¶</A></H2>
+<P>As a final stack example, we will consider the evaluation of an expression 
+that is already in postfix notation. In this case, a stack is again the data 
+structure of choice. However, as you scan the postfix expression, it is the 
+operands that must wait, not the operators as in the conversion algorithm above. 
+Another way to think about the solution is that whenever an operator is seen on 
+the input, the two most recent operands will be used in the evaluation.</P>
+<P>To see this in more detail, consider the postfix expression <CODE class="docutils literal"><SPAN 
+class="pre">4</SPAN> <SPAN class="pre">5</SPAN> <SPAN class="pre">6</SPAN> <SPAN 
+class="pre">*</SPAN> <SPAN class="pre">+</SPAN></CODE>. As you scan the 
+expression from left to right, you first encounter the operands 4 and 5. At this 
+point, you are still unsure what to do with them until you see the next symbol. 
+Placing each on the stack ensures that they are available if an operator comes 
+next.</P>
+<P>In this case, the next symbol is another operand. So, as before, push it and 
+check the next symbol. Now we see an operator, *. This means that the two most 
+recent operands need to be used in a multiplication operation. By popping the 
+stack twice, we can get the proper operands and then perform the multiplication 
+(in this case getting the result 30).</P>
+<P>We can now handle this result by placing it back on the stack so that it can 
+be used as an operand for the later operators in the expression. When the final 
+operator is processed, there will be only one value left on the stack. Pop and 
+return it as the result of the expression. <A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#fig-evalpost1"><SPAN 
+class="std std-ref">Figure 10</SPAN></A> shows the stack contents as this entire 
+example expression is being processed.</P>
+<DIV class="figure align-center" id="id8"><SPAN id="fig-evalpost1"></SPAN><IMG 
+alt="../_images/evalpostfix1.png" src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/evalpostfix1.png"> 
+<P class="caption"><SPAN class="caption-text">Figure 10: Stack Contents During 
+Evaluation</SPAN></P></DIV>
+<P><A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#fig-evalpost2"><SPAN 
+class="std std-ref">Figure 11</SPAN></A> shows a slightly more complex example, 
+7 8 + 3 2 + /. There are two things to note in this example. First, the stack 
+size grows, shrinks, and then grows again as the subexpressions are evaluated. 
+Second, the division operation needs to be handled carefully. Recall that the 
+operands in the postfix expression are in their original order since postfix 
+changes only the placement of operators. When the operands for the division are 
+popped from the stack, they are reversed. Since division is <EM>not</EM> a 
+commutative operator, in other words <SPAN class="math">\(15/5\)</SPAN> is not 
+the same as <SPAN class="math">\(5/15\)</SPAN>, we must be sure that the order 
+of the operands is not switched.</P>
+<DIV class="figure align-center" id="id9"><SPAN id="fig-evalpost2"></SPAN><IMG 
+alt="../_images/evalpostfix2.png" src="Infix,%20Prefix%20and%20Postfix%20Expressions%20—%20Problem%20Solving%20with%20Algorithms%20and%20Data%20Structures_files/evalpostfix2.png"> 
+<P class="caption"><SPAN class="caption-text">Figure 11: A More Complex Example 
+of Evaluation</SPAN></P></DIV>
+<P>Assume the postfix expression is a string of tokens delimited by spaces. The 
+operators are *, /, +, and - and the operands are assumed to be single-digit 
+integer values. The output will be an integer result.</P>
+<OL class="arabic simple">
+  <LI>Create an empty stack called <CODE class="docutils literal"><SPAN class="pre">operandStack</SPAN></CODE>.</LI>
+  <LI>Convert the string to a list by using the string method <CODE class="docutils literal"><SPAN 
+  class="pre">split</SPAN></CODE>.</LI>
+  <LI>Scan the token list from left to right.
+  <UL>
+    <LI>If the token is an operand, convert it from a string to an integer and 
+    push the value onto the <CODE class="docutils literal"><SPAN 
+    class="pre">operandStack</SPAN></CODE>.</LI>
+    <LI>If the token is an operator, *, /, +, or -, it will need two operands. 
+    Pop the <CODE class="docutils literal"><SPAN 
+    class="pre">operandStack</SPAN></CODE> twice. The first pop is the second 
+    operand and the second pop is the first operand. Perform the arithmetic 
+    operation. Push the result back on the <CODE class="docutils literal"><SPAN 
+    class="pre">operandStack</SPAN></CODE>.</LI></UL></LI>
+  <LI>When the input expression has been completely processed, the result is on 
+  the stack. Pop the <CODE class="docutils literal"><SPAN 
+  class="pre">operandStack</SPAN></CODE> and return the value.</LI></OL>
+<P>The complete function for the evaluation of postfix expressions is shown in 
+<A class="reference internal" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#lst-postfixeval"><SPAN 
+class="std std-ref">ActiveCode 2</SPAN></A>. To assist with the arithmetic, a 
+helper function <CODE class="docutils literal"><SPAN 
+class="pre">doMath</SPAN></CODE> is defined that will take two operands and an
+ operator and then perform the proper arithmetic operation.</P>
+<DIV class="explainer ac_section alert alert-warning" data-childcomponent="postfixeval"><TEXTAREA id="postfixeval" data-caption="Postfix Evaluation" data-audio="" data-timelimit="25000" data-lang="python" data-component="activecode">from pythonds.basic.stack import Stack
+
+def postfixEval(postfixExpr):
+    operandStack = Stack()
+    tokenList = postfixExpr.split()
+
+    for token in tokenList:
+        if token in "0123456789":
+            operandStack.push(int(token))
+        else:
+            operand2 = operandStack.pop()
+            operand1 = operandStack.pop()
+            result = doMath(token,operand1,operand2)
+            operandStack.push(result)
+    return operandStack.pop()
+
+def doMath(op, op1, op2):
+    if op == "*":
+        return op1 * op2
+    elif op == "/":
+        return op1 / op2
+    elif op == "+":
+        return op1 + op2
+    else:
+        return op1 - op2
+
+print(postfixEval('7 8 + 3 2 + /'))
+</TEXTAREA> 
+</DIV>
+<P>It is important to note that in both the postfix conversion and the postfix 
+evaluation programs we assumed that there were no errors in the input 
+expression. Using these programs as a starting point, you can easily see how 
+error detection and reporting can be included. We leave this as an exercise at 
+the end of the chapter.</P>
+<DIV class="admonition-self-check admonition">
+<P class="first admonition-title">Self Check</P>
+<P id="postfix1" data-component="fillintheblank" data-casei="false"><SPAN 
+data-blank="">            Without using the activecode infixToPostfix function, 
+convert the following expression to postfix  <CODE 
+class="docutils literal"><SPAN class="pre">10</SPAN> <SPAN class="pre">+</SPAN> 
+<SPAN class="pre">3</SPAN> <SPAN class="pre">*</SPAN> <SPAN class="pre">5</SPAN> 
+<SPAN class="pre">/</SPAN> <SPAN class="pre">(16</SPAN> <SPAN 
+class="pre">-</SPAN> <SPAN class="pre">4)</SPAN></CODE>         <SPAN id="pfblank1_feedback1" 
+style="display: none;" data-feedback="regex">10.*3.*5.*16.*4</SPAN>         
+<SPAN style="display: none;" data-feedback="text" for="pfblank1_feedback1">The 
+numbers appear to be in the correct order check your operators</SPAN>            
+         <SPAN id="pfblank1_feedback2" style="display: none;" data-feedback="regex">.*</SPAN> 
+        <SPAN style="display: none;" data-feedback="text" for="pfblank1_feedback2">Remember 
+the numbers will be in the same order as the original equation</SPAN>            
+         <SPAN id="pfblank1_answer" style="display: none;" 
+data-answer="">\\b10\\s+3\\s+5\\s*\\*\\s*16\\s+4\\s*-\\s*/\\s*\\+</SPAN>         
+</SPAN>                 </P>
+<P id="postfix2" data-component="fillintheblank" data-casei="false"><SPAN 
+data-blank="">            What is the result of evaluating the following: <CODE 
+class="docutils literal"><SPAN class="pre">17</SPAN> <SPAN class="pre">10</SPAN> 
+<SPAN class="pre">+</SPAN> <SPAN class="pre">3</SPAN> <SPAN class="pre">*</SPAN> 
+<SPAN class="pre">9</SPAN> <SPAN class="pre">/</SPAN> <SPAN 
+class="pre">==</SPAN></CODE>         <SPAN id="pfblank2_feedback1" style="display: none;" 
+data-feedback="regex">.*</SPAN>         <SPAN style="display: none;" 
+data-feedback="text" for="pfblank2_feedback1">Remember to push each intermediate 
+result back on the stack</SPAN>                     <SPAN id="pfblank2_answer" 
+style="display: none;" data-answer="">\\b9\\b</SPAN>         </SPAN>             
+    </P>
+<P id="postfix3" data-component="fillintheblank" data-casei="false"><SPAN 
+data-blank="">            Modify the infixToPostfix function so that it can 
+convert the following expression:  <CODE class="docutils literal"><SPAN class="pre">5</SPAN> 
+<SPAN class="pre">*</SPAN> <SPAN class="pre">3</SPAN> <SPAN 
+class="pre">**</SPAN> <SPAN class="pre">(4</SPAN> <SPAN class="pre">-</SPAN> 
+<SPAN class="pre">2)</SPAN></CODE>   Paste the answer here:         <SPAN id="pfblank3_feedback1" 
+style="display: none;" data-feedback="regex">.*</SPAN>         <SPAN style="display: none;" 
+data-feedback="text" for="pfblank3_feedback1">Hint: You only need to add one 
+line to the function!!</SPAN>                     <SPAN id="pfblank3_answer" 
+style="display: none;" data-answer="">5\\s+3\\s+4\\s+2\\s*-\\s*\\^\\s*\\*</SPAN> 
+        </SPAN>                 </P></DIV>
+<DIV class="video_popup" id="video_Stack3"><VIDEO preload="none" controls="" 
+poster="../_static/activecodethumb.png"><SOURCE src="http://media.interactivepython.org/pythondsVideos/Stack3.mov" 
+type="video/mp4">     <SOURCE src="http://media.interactivepython.org/pythondsVideos/Stack3.webm" 
+type="video/webm">    No supported video types </VIDEO> </DIV>
+<SCRIPT>
+   jQuery(function($) {
+      var rb = new RunestoneBase();
+      $('#video_Stack3_thumb').click(function(e) {
+         $('#video_Stack3').show();
+         $('#video_Stack3_thumb').hide();
+         rb.logBookEvent({'event':'video','act':'play','div_id': 'video_Stack3'});
+         // Log the run event
+      });
+      $('#video_Stack3 video').one("click", function(){
+        this.play();
+      });
+      $('#video_Stack3 video').one("play", function(){
+        rb.logBookEvent({'event':'video','act':'play','div_id': 'video_Stack3'});
+      });
+   });
+</SCRIPT>
+ </DIV></DIV>
+<LI title="Previous Section - 3.8. Converting Decimal Numbers to Binary Numbers" 
+class="navLink" id="relations-prev" data-toggle="tooltip"><A href="http://interactivepython.org/runestone/static/pythonds/BasicDS/ConvertingDecimalNumberstoBinaryNumbers.html"><I 
+class="prevNav glyphicon glyphicon-chevron-left"></I>     </A>   </LI>   <A 
+class="navLinkBg" id="navLinkBgLeft" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/ConvertingDecimalNumberstoBinaryNumbers.html"></A> 
+    
+<LI title="Next Section - 3.10. What Is a Queue?" class="navLink" id="relations-next" 
+data-toggle="tooltip"><A href="http://interactivepython.org/runestone/static/pythonds/BasicDS/WhatIsaQueue.html"><I 
+class="nextNav glyphicon glyphicon-chevron-right" id="relationsNextIcon"></I>    
+ </A>   </LI>   <A class="navLinkBg navLink" id="navLinkBgRight" href="http://interactivepython.org/runestone/static/pythonds/BasicDS/WhatIsaQueue.html">Next 
+Section - 3.10. What Is a Queue?</A> 
+<SCRIPT type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</SCRIPT>
+   </DIV><FOOTER class="footer">
+<DIV class="container">
+<P class="pull-right"><SPAN id="numuserspan"></SPAN> readers online now | <SPAN 
+class="loggedinuser"></SPAN>            | <A href="http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html#">Back 
+to top</A>           </P>
+<P>© Copyright 2014 Brad Miller, David Ranum.      Created using <A href="http://runestoneinteractive.org/">Runestone</A> 
+2.7.7.     </P></DIV></FOOTER>
+<SCRIPT type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</SCRIPT>
+   </BODY></HTML>

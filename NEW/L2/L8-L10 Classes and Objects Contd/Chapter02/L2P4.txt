@@ -1,0 +1,27 @@
+/*Beginning of structDistance02.cpp*/
+#include<iostream.h>
+struct Distance
+{
+	
+	 
+	void setFeet(int x)	//public by default
+	{
+		iFeet=x;  
+	}
+	int getFeet()
+	{
+		return iFeet;
+	}
+	void setInches(float y)
+	{
+		fInches=y;
+	}
+	float getInches()
+	{
+		return fInches;
+	}
+	private:
+	int iFeet;
+	float fInches;
+};
+ 

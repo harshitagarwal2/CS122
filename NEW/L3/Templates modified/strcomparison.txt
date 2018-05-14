@@ -1,0 +1,4 @@
+char * larger(char * a, char * b)
+{
+	return strcmp(a,b) > 0 ? a : b;
+}

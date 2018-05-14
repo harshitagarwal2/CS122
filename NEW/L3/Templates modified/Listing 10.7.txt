@@ -1,0 +1,17 @@
+/*Beginning of swap03.cpp*/
+#include<iostream.h>
+#include"swap.h"
+#include"Distance.h"
+void main()
+{
+	Distance d1(1,1.1),d2(2,2.2);
+	cout<<"Before swapping\n";
+	cout<<"d1="<<d1.getFeet()<<"'-"<<d1.getInches()<<"''\n";
+	cout<<"d2="<<d2.getFeet()<<"'-"<<d2.getInches()<<"''\n";
+	swap(d1,d2); //compiler generates swap(Distance&,
+				//Distance&); and resolves the call
+	cout<<"After swapping\n";
+	cout<<"d1="<<d1.getFeet()<<"'-"<<d1.getInches()<<"''\n";
+	cout<<"d2="<<d2.getFeet()<<"'-"<<d2.getInches()<<"''\n";
+}
+/*End of swap03.cpp*/

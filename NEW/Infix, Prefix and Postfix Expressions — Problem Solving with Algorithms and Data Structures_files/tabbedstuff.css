@@ -1,0 +1,18 @@
+.tab-pane {
+	padding: 20px 15px 10px;
+}
+.nav-tabs.nav {
+	border-color: rgb(251, 238, 213); border-radius: 4px; padding-top: 6px; background-color: rgb(207, 204, 184);
+}
+.nav-tabs.nav li {
+	margin-right: 1px; margin-left: 6px;
+}
+.nav-tabs.nav li > a {
+	color: rgb(85, 85, 85); border-bottom-color: rgb(252, 248, 227); background-color: rgb(230, 226, 204);
+}
+.nav-tabs > li > a:hover {
+	border-color: rgb(180, 177, 157); border-bottom-width: 0px;
+}
+.nav-tabs.nav li.active > a {
+	background-color: rgb(250, 247, 223);
+}

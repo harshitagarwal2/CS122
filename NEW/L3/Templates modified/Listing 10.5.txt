@@ -1,0 +1,16 @@
+/*Beginning of swap01.cpp*/
+#include<iostream.h>
+#include"swap.h"
+void main()
+{
+	int x,y;
+	x=10;
+	y=20;
+	cout<<"Before swapping\n";
+	cout<<"x="<<x<<" y="<<y<<endl;
+	swap(x,y); //compiler generates swap(int&, int&); and
+	//resolves the call
+	cout<<"After swapping\n";
+	cout<<"x="<<x<<" y="<<y<<endl;
+}
+/*End of swap01.cpp*/

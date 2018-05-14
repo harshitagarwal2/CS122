@@ -1,0 +1,20 @@
+class A
+{
+   public:
+      void show();
+}
+
+class B
+{
+   public:
+       void show();
+
+}
+
+
+Though the signature appears to be same, they are actully different. The function 
+prototypes in respective classes are actually as follows(as per the discussion w.r.t
+this pointer)
+
+void show(A * const);
+void show(B * const);
